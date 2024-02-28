@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'hidden': !showCarousel }">
+  <div >
     <b-row @wheel.prevent="handleWheel">
       <b-carousel
         id="carousel-1"
@@ -8,8 +8,7 @@
         controls
         indicators
         background="#ababab"
-        img-width="100%"
-        img-height="400%"
+        no-animation 
         style="text-shadow: 1px 1px 2px #333"
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
@@ -58,6 +57,6 @@ export default {
 
 <style scoped>
 .hidden {
-  display: none;
+  display: none; /* Cambiado a 'none' */
 }
 </style>

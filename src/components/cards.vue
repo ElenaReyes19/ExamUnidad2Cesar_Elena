@@ -2,8 +2,7 @@
     <div>
         <h4>cards</h4>
         <b-card
-    
-      v-for="(movie, index) in movies"
+          v-for="(movie, index) in movies"
       :key="index"
       :title="movie.name"
       :img-src="getImgSrc()"
@@ -12,6 +11,12 @@
       tag="article"
       style="max-width: 20rem; margin-bottom: 1rem;"
     >
+
+      <b-card-text>
+        {{ movie.description }}
+      </b-card-text>
+
+      <b-button href="#" variant="primary">Go somewhere</b-button>
     </b-card>
     </div>
 </template>
